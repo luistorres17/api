@@ -10,8 +10,8 @@ router.post('/login', usuarioController.login);
 // Rutas protegidas (requieren autenticación)
 router.get('/', authMiddleware, usuarioController.getAll);
 router.get('/:id', authMiddleware, usuarioController.getById);
-router.post('/', authMiddleware, usuarioController.create);
-router.put('/:id', authMiddleware, usuarioController.update);
-router.delete('/:id', authMiddleware, usuarioController.delete);
+router.post('/', authMiddleware, usuarioController.create);//si sirve
+router.put('/:id', authMiddleware, usuarioController.update); 
+router.delete('/:id', authMiddleware, usuarioController.delete);//no elimina
 
 module.exports = router;
